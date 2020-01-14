@@ -1,0 +1,51 @@
+
+
+<ion-content>
+  
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+
+  <!-- <div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.firstname">
+      <div class="error-message" *ngIf="validations_form.get('firstname').hasError(validation.type) && (validations_form.get('firstname').dirty || validations_form.get('firstname').touched)">
+        {{ validation.message }}
+      </div>
+    </ng-container>
+  </div> -->
+    
+
+  <!-- <ion-item lines="none">
+    <ion-label>{{ firstname }}</ion-label>
+  </ion-item> -->
+
+  <section>
+    <ion-input type="text" placeholder="Firstname" formControlName="firstname"></ion-input>
+  </section>
+  
+
+  <section>
+    <ion-input type='password' placeholder="Password" formControlName="password"></ion-input>
+  </section>
+ 
+
+  <section>
+    <ion-button size='block' type="submit">Login</ion-button>
+  </section>
+
+  <section>
+    <div>Home link <a [routerLink]="'home/'">Home</a></div>
+  </section>
+  <ion-button [routerLink]="['contact']" routerDirection="forward">Go to contact</ion-button>
+
+  <div>chat link <a href="chat">chat</a></div>
+
+  <ion-item routerDirection="forward">
+    <ion-label [routerLink]="'home/'">login</ion-label>
+  </ion-item>
+
+</form>
+
+
+</ion-content>
+
+
